@@ -1,0 +1,35 @@
+#weatherIcon {
+    font-size: 3em;
+}
+
+#weather {
+    text-transform: uppercase;
+}
+
+#windIcon {
+    font-size: 1.5em;
+}
+
+#windContainer {
+    margin-top: 5px;
+}
+
+#temperatureContainer {
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.leftSide {
+    display: block;
+    width: 60%;
+    float: left;
+}
+
+.rightSide {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 30%;
+    transform: translateY(-50%);
+}
