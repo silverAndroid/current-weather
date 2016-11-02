@@ -1,10 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
     <title>Weather</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        body {
+            background: #F5F3F2;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        span.mdl-card__supporting-text {
+            font-weight: 300;
+            font-size: 1em;
+        }
+
+        .mdl-card {
+            min-height: 0;
+            width: 92%;
+            max-width: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
+<link rel="stylesheet" href="stylesheets/index.min.css">
 
+<div class="mdl-card mdl-shadow--4dp" id="card1">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Welcome</h2>
+    </div>
+    <div class="mdl-card__supporting-text" id="cardText">
+        Want some weather?
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="btnYes">
+            Yes, please
+        </a>
+    </div>
+</div>
+<div class="mdl-card mdl-shadow--4dp" style="display: none;" id="card2">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text" id="card2Title">Loading...</h2>
+    </div>
+    <div class="mdl-card__supporting-text" id="card2Text">
+        <div class="mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
+</div>
+<div class="mdl-card mdl-shadow--4dp" style="display: none;" id="card3">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text" id="cityName">City Name</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <div class="leftSide">
+            <span id="weather"></span>
+            <div id="windContainer">
+                <i class="wi wi-wind" id="windIcon"></i>
+                <span id="wind"></span>
+            </div>
+            <div id="temperatureContainer">
+                <span id="temperature"></span>
+            </div>
+        </div>
+        <div class="rightSide">
+            <i class="wi" id="weatherIcon"></i>
+        </div>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="btnRefresh">
+            Refresh
+        </a>
+    </div>
+</div>
+<script src="javascripts/index.min.js"></script>
+<link rel="stylesheet" href="stylesheets/weather-icons.min.css">
+<link rel="stylesheet" href="stylesheets/weather-icons-wind.min.css">
 </body>
 </html>
