@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name=viewport content="width=device-width, initial-scale=1">
+    <title>Page not found</title>
+    <link rel="stylesheet" href="stylesheets/weather-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <style>
+        body {
+            background: #F5F3F2;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .mdl-card {
+            width: 92%;
+            max-width: 330px;
+            min-height: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 4px;
+        }
+
+        .rightSide {
+            width: 70%;
+            float: right;
+            bottom: 20%;
+            margin-bottom: 35px;
+        }
+
+        .leftSide {
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            width: 30%;
+            transform: translateY(50%);
+        }
+
+        .wi {
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+<div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h3>Page cannot be found</h3>
+    </div>
+    <div class="mdl-card__supporting-text" id="card2Text">
+
+        <div class="leftSide">
+            <i class="wi wi-owm-900"></i>
+        </div>
+        <div class="rightSide">
+            <span>The page you requested has either been blown away</span>
+            <span>or it never existed</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
