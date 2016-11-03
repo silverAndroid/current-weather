@@ -1,4 +1,10 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/error.css')
+  body
+    block content
 
 block content
   h1= message
