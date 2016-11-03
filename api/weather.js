@@ -5,10 +5,10 @@ var request = require('request');
 var apiKey = process.env.API_KEY;
 
 var getWeather = function (latitude, longitude, callback) {
-    request(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`,
+    request(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`, {json: true},
         function (error, response, body) {
             var json = {status: response.statusCode};
-            json[!error ? 'weatherData' : 'error'] = JSON.parse(body);
+            json[!error ? 'weatherData' : 'error'] = body;
             callback(json);
         });
 };
