@@ -6,6 +6,8 @@ function API() {
     this.getWeather = function (latitude, longitude, callback) {
         $.get('./api/weather', {lat: latitude, lon: longitude}, function (result) {
             callback(result);
-        }, 'json');
+        }).fail(function (error) {
+            callback(error.responseJSON);
+        });
     };
 }

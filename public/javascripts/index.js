@@ -37,27 +37,16 @@ var loadWeather = function (position) {
             card3.css({'display': 'block'});
             card2.css({display: 'none'});
         } else {
-            card2Text.text('An unknown error occurred!');
+            showError(result['weatherData']);
         }
     });
 };
 
 var showError = function (error) {
     card2Title.text('Error');
-    switch (error.code) {
-        case error.PERMISSION_DENIED:
-            card2Text.text('User denied the request for Geolocation.');
-            break;
-        case error.POSITION_UNAVAILABLE:
-            card2Text.text('Location information is unavailable.');
-            break;
-        case error.TIMEOUT:
-            card2Text.text('The request to get user location timed out.');
-            break;
-        case error.UNKNOWN_ERROR:
-            card2Text.text('An unknown error occurred.');
-            break;
-    }
+    $('.mdl-spinner').css({display: 'none'});
+    card2Text.text(error.message);
+    $('.mdl-card').css({'width': 'auto', 'max-width': 'inherit'});
 };
 
 var displayWeather = function (weather) {
